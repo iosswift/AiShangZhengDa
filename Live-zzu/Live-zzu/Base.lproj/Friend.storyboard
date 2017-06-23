@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lzo-g9-Vdm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Friend View Controller-->
+        <scene sceneID="PCQ-uX-2OF">
+            <objects>
+                <viewController id="yFc-NY-Sdi" customClass="FriendViewController" customModule="Live_zzu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pPf-kb-WoS"/>
+                        <viewControllerLayoutGuide type="bottom" id="0lU-AW-iqT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hIK-oq-0pz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CNr-8o-pVv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="XqX-qx-L6n" kind="embed" id="gpr-VT-vSt"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L3r-8G-Utq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="ft5-8C-6nF" kind="embed" id="V6a-AK-B1P"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vfe-n6-HJB">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" id="IYt-3A-Rbg">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QbM-Du-HBT">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="friend_scan"/>
+                            </button>
+                        </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="7pB-b1-ir6">
+                            <rect key="frame" x="112.5" y="7" width="150" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="朋友"/>
+                                <segment title="群组"/>
+                            </segments>
+                            <connections>
+                                <action selector="indexChanged:" destination="yFc-NY-Sdi" eventType="valueChanged" id="86k-C2-pse"/>
+                            </connections>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" id="Xys-bA-2tO">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="deg-zI-k7j">
+                                <rect key="frame" x="324" y="7" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="friend_add"/>
+                                <connections>
+                                    <action selector="btnTap:" destination="yFc-NY-Sdi" eventType="touchUpInside" id="qiS-0p-I8C"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btn" destination="deg-zI-k7j" id="R1n-3G-bXk"/>
+                        <outlet property="firstView" destination="L3r-8G-Utq" id="r6v-CC-MGK"/>
+                        <outlet property="secondView" destination="CNr-8o-pVv" id="5un-zS-iFo"/>
+                        <outlet property="segmentedControl" destination="7pB-b1-ir6" id="y4b-Aq-FJX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bay-uM-ZiB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221.5999999999999" y="-385.45727136431788"/>
+        </scene>
+        <!--朋友-->
+        <scene sceneID="wxH-hW-NTy">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pM4-IB-sjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lzo-g9-Vdm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="朋友" image="tab_icon_friend" selectedImage="tab_icon_friend_selected" id="Vz9-aj-LuD"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Re6-fe-mma">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yFc-NY-Sdi" kind="relationship" relationship="rootViewController" id="xLw-1u-LVz"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="404" y="-385"/>
+        </scene>
+        <!--Qunzu View Controller-->
+        <scene sceneID="1UC-1E-tfP">
+            <objects>
+                <viewController id="XqX-qx-L6n" customClass="qunzuViewController" customModule="Live_zzu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HxL-bd-NCg"/>
+                        <viewControllerLayoutGuide type="bottom" id="9WD-IE-ZbY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IUo-9G-2Cl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.51592626850000001" green="1" blue="0.52068304119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uXp-EY-K8W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038" y="-757"/>
+        </scene>
+        <!--Pengyou View Controller-->
+        <scene sceneID="yuY-sD-Eh5">
+            <objects>
+                <viewController id="ft5-8C-6nF" customClass="pengyouViewController" customModule="Live_zzu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n5v-X3-Y2w"/>
+                        <viewControllerLayoutGuide type="bottom" id="ENR-f0-Lf0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g6e-6K-ChL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.97051314420000001" blue="0.59554740559999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U8Z-7Q-A7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038" y="-190"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="friend_add" width="20" height="20"/>
+        <image name="friend_scan" width="20" height="20"/>
+        <image name="tab_icon_friend" width="72" height="31"/>
+        <image name="tab_icon_friend_selected" width="72" height="32"/>
+    </resources>
+</document>

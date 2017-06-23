@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cg2-OX-X2l">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--生活-->
+        <scene sceneID="qwH-TT-m3b">
+            <objects>
+                <viewController id="dDF-C6-a0Z" customClass="LifeViewController" customModule="Live_zzu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xrZ-GL-sXv"/>
+                        <viewControllerLayoutGuide type="bottom" id="BbV-PJ-bVT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EgD-Ly-Kz1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="生活" id="GeD-61-uzL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7xd-rg-SUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="-1095"/>
+        </scene>
+        <!--生活-->
+        <scene sceneID="LbK-DN-Rbn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cg2-OX-X2l" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="生活" image="tab_icon_life" selectedImage="tab_icon_life_selected" id="deZ-fW-xVy"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="maC-eM-x4E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dDF-C6-a0Z" kind="relationship" relationship="rootViewController" id="C58-ns-XLR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6v-aN-Imi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="358" y="-1095"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_icon_life" width="72" height="32"/>
+        <image name="tab_icon_life_selected" width="72" height="30"/>
+    </resources>
+</document>

@@ -15,6 +15,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let stringValue  = userDefault.string(forKey: "String")
+        
+        if stringValue == nil{
+            //删除本地的数据
+            userDefault.removeObject(forKey: "String")
+        }
+        
+     
+        
+        
+        
+        
+        
+        
+        
+        
+        
         // Override point for customization after application launch.
         return true
     }

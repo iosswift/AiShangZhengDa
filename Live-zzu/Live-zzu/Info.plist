@@ -29,10 +29,17 @@
 		<string>armv7</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
+	<array/>
+	<key>NSContactsUsageDescription</key>
+	<string>app需要访问你的通讯录</string>
+	<key>NSCameraUsageDescription</key>
+	<string>qwe</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>APP需要你的支持</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
